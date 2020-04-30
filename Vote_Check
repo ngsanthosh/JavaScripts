@@ -1,0 +1,22 @@
+<html>
+<body bgcolor="lightblue">
+<head><title>My first JS program</title>
+
+<p><center><h1>Welcome to my website!</h1></p>
+<p>This is my first JavaScript Program</p>
+
+<input id="ttt" type="text" placeholder="Enter your Age"><br><br>
+<button onclick="myFunction()">Click me</button>
+
+	<script>
+		function myFunction() {
+		  var age, voteable;
+		  age = document.getElementById("ttt").value;
+		  voteable = (age < 18) ? "You are Too young to vote":"You are Old enough to vote";
+		  alert(voteable);
+		  }
+	</script>
+
+</head>
+</body>
+</html>
