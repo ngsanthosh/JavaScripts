@@ -1,0 +1,33 @@
+<html>
+<body bgcolor="mistyrose">
+<head>
+<p><center><h1>Welcome to my website!</h1></p>
+<p>This is my first JavaScript Program</p>
+
+<script>
+	function cal1() 
+	
+	{
+	
+		var usname = document.getElementById("text1").value;
+		var pass   = document.getElementById("text2").value;
+		
+		/* Its been boorringg using if..else.. Lets use something different!
+		if (usname == "username"  && pass=="password")
+			alert("Login successful");
+		else 
+			alert("Login Unsuccessful"); */
+			
+		var vote=(usname == "username"  && pass=="password")?"Login successful!":"Login Unsuccessful!";
+		alert(vote);
+			
+	}
+</script>
+
+<input id="text1" type="text" placeholder="Username"><br><br>
+<input id="text2" type="password" placeholder="Password"><br><br>
+<button onclick="cal1()">Login</button>
+
+</head>
+</body>
+</html>
