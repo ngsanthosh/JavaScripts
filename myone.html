@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<!--Scripted by N.G. SANTHOSH SUDHAAN-->
+
+<html>
+<head><title>Coronavirus check</title>
+<center><h2>Welcome to Corona virus self assess test!</center>
+
+<body bgcolor = "mistyrose">
+	
+	<script>
+	
+		function main() 
+		{
+			alert("Im called");
+			var temp;
+			
+			var bu1 = document.getElementById("bu1");
+			var bu2 = document.getElementById("bu2"); 
+			var bu3 = document.getElementById("bu3");
+			var bu4 = document.getElementById("bu4");
+			
+			var sy1 = document.getElementById("sy1");
+			var sy2 = document.getElementById("sy2");
+			var sy3 = document.getElementById("sy3");
+			var sy4 = document.getElementById("sy4");
+			var sy5 = document.getElementById("sy5");
+			var sy6 = document.getElementById("sy6");
+			var sy7 = document.getElementById("sy7");
+			
+			var tra1 = document.getElementById("tra1");
+			var tra2 = document.getElementById("tra2");
+			var tra3 = document.getElementById("tra3");
+			
+			var his1 = document.getElementById("his1");
+			var his2 = document.getElementById("his2");
+			var his3 = document.getElementById("his3");
+			var his4 = document.getElementById("his4");
+			var his5 = document.getElementById("his5");*/
+			
+			if(bu1.checked==true || bu2.checked==true || bu3.checked == true || bu4.checked == true)
+				Symp();
+			else	
+				alert("No option is selected!");
+			
+			
+			function Symp() 
+			{
+			
+			if(sy1.checked==1 || sy2.checked==1 || sy3.checked==1 || sy4.checked==1 || sy5.checked==1 \\ sy6.checked==1  )
+			{
+			  temp+=1;
+				trav();  
+			}	
+			else if(sy7.checked==1)
+				trav();
+			else	
+				alert("No option is selected!");
+			}
+			
+			
+			function trav()
+			{
+			if(tra1.checked==1 || tra2.checked==1)
+				hist();
+			else if(tra3.checked==true)
+				final3();
+			else
+				alert("No option is selected!");
+			}
+			
+			
+			function hist()
+			{
+			if(his1.checked==1 || his2.checked==1 || his3.checked==1 || his4.checked==1 )
+				{
+				 if(temp!=0)
+					final3();
+				 else
+					alert("Except this condition, There is no sign for corona");
+					good(); 
+				}
+			else if(his5.checked==1)
+				{
+				 if(temp==0)
+					 good();
+				 else
+					 alert("Good but it is still suggessted to have a physical test at neareby hospital");
+					
+				}
+			else
+				alert("No option is selected!");
+			}
+			
+			
+			function good() 
+				alert("Thats good., You are all fine!");
+				
+				
+			function final3()
+				alert("Seems risky., It is recommended to have a physical test at nearby hospital!")
+			
+			
+				
+		}
+		
+	</script>
+		
+		<p><h3>What is your current body temperature?</h3></p>
+		<input id="bu1" name="same" type="radio" 
+			value="Normal fever">Normal fever<br>
+			
+		<input id="bu2" name="same" type="radio" 
+			value="Fever">Fever<br>
+			
+		<input id="bu3" name="same" type="radio" 
+			value="High fever">High fever<br>
+			
+		<input id="bu4" name="same" type="radio" 
+			value="Dont know">Don't know<br>
+			
+			
+	    <p><h3>Are you experiencing any of the symptoms below?</h3></p>	
+		<input id="sy1" name="same1" type="radio" 
+			value="Dry cough">Dry cough<br>
+			
+		<input id="sy2" name="same1" type="radio" 
+			value="Sore throat">Sore throat<br>
+			
+		<input id="sy3" name="same1" type="radio" 
+			value="Weakness">Weakness<br>
+			
+		<input id="sy4" name="same1" type="radio" 
+			value="Change in Appetite">Change in Appetite<br>
+			
+		<input id="sy5" name="same1" type="radio" 
+			value="Difficulty in Breathing">Difficulty in Breathing<br>
+			
+		<input id="sy6" name="same1" type="radio" 
+			value="Drowsiness">Drowsiness<br>
+			
+		<input id="sy7" name="same1" type="radio" 
+			value="Weakness">None of these<br>
+			
+			
+		<p><h3>Now please select your travel and exposure details:</h3></p>
+		<input id="tra1" name="same3" type="radio" 
+			value="No Travel history">No Travel history<br>
+			
+		<input id="tra2" name="same3" type="radio" 
+			value="No contact with anyone with Symptoms">No contact with anyone with Symptoms<br>
+			
+		<input id="tra3" name="same3" type="radio" 
+			value="History of abroad travel in last 14 days">History of abroad travel in last 14 days<br>
+			
+			
+		<p><h3>Do you have any of these conditions?</h3></p>	
+		<input id="his1" name="same4" type="radio" 
+			value="diabetes">diabetes<br>
+			
+		<input id="his2" name="same4" type="radio" 
+			value="High Blood Pressure">High Blood Pressure<br>
+			
+		<input id="his3" name="same4" type="radio" 
+			value="Heart disease">Heart disease<br>
+			
+		<input id="his4" name="same4" type="radio" 
+			value="Lung diseases">Lung diseases<br>
+			
+		<input id="his5" name="same4" type="radio" 
+			value="None of these">None of these<br><br>
+			
+			
+		<button onclick="main()">Submit</button>
+		
+		
+		
+</body>
+
+</head>
+</html>
